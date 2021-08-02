@@ -1,0 +1,13 @@
+{
+		"PageMenu": "Hotels",
+		"Location": "Goa",
+		"CheckInDate": "21/09/2021",
+		"CheckOutDate": "23/09/2021",
+		"NoOfRooms": "1",
+		"NoOfAdults": "4",
+		"NoOfChildren": "3",
+		"ChidrenAge": ["1","2","3"],
+		"TravellingFor": "Work"
+}
+
+

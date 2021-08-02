@@ -1,0 +1,20 @@
+[21:18:00.209] INFO   Testcases.BaseTest.setPrerequisites(BaseTest.java:27)                            - Log properties initialized
+[21:18:00.224] INFO   DriverManager.DriverFactory.initDriver(DriverFactory.java:20)                    - BrowserType selected = chrome
+[21:18:04.300] INFO   DriverManager.DriverFactory.initDriver(DriverFactory.java:33)                    - Browser set into threadlocal!
+[21:18:04.301] INFO   DriverManager.DriverFactory.getCurrentDriver(DriverFactory.java:40)              - Getting current driver
+[21:18:04.453] INFO   Testcases.BaseTest.browserOpen(BaseTest.java:33)                                 - Browser opened
+[21:18:04.462] INFO   DriverManager.DriverFactory.getCurrentDriver(DriverFactory.java:40)              - Getting current driver
+[21:18:04.466] INFO   Pages.LandingPage.open(LandingPage.java:31)                                      - Navingating to https://www.makemytrip.com
+[21:18:04.467] INFO   Pages.BasePage.openPage(BasePage.java:34)                                        - Navigating to Page:: https://www.makemytrip.com
+[21:18:14.188] INFO   BO.TestDatasBO.setLocation(TestDatasBO.java:42)                                  - Location :Goa
+[21:18:14.190] INFO   BO.TestDatasBO.setCheckInDate(TestDatasBO.java:55)                               - Check-In-Date :21/09/2021
+[21:18:14.190] INFO   BO.TestDatasBO.setCheckOutDate(TestDatasBO.java:68)                              - Check-out-Date :23/09/2021
+[21:18:14.191] INFO   BO.TestDatasBO.setNoOfRooms(TestDatasBO.java:81)                                 - no.of Rooms :1
+[21:18:14.191] INFO   BO.TestDatasBO.setNoOfAdults(TestDatasBO.java:94)                                - no.of adults :4
+[21:18:14.191] INFO   BO.TestDatasBO.setNoOfChildren(TestDatasBO.java:111)                             - No.of childern:3
+[21:18:14.191] INFO   BO.TestDatasBO.setTravellingFor(TestDatasBO.java:140)                            - Travelling forDate :Work
+[21:18:14.192] INFO   BO.TestDatasBO.setChidrenAge(TestDatasBO.java:131)                               - Children age list :[1, 2, 3]
+[21:18:14.193] INFO   DriverManager.DriverFactory.getCurrentDriver(DriverFactory.java:40)              - Getting current driver
+[21:18:14.194] INFO   Pages.LandingPage.goToPagetab(LandingPage.java:42)                               - Clicking on menu: Hotels
+[21:18:15.539] INFO   Pages.LandingPage.goToPagetab(LandingPage.java:48)                               - Popup found, clicking hotel menu link
+[21:18:18.805] INFO   DriverManager.DriverFactory.getCurrentDriver(DriverFactory.java:40)              - Getting current driver
