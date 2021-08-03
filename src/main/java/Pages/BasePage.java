@@ -3,10 +3,7 @@ package Pages;
 import DriverManager.DriverFactory;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -40,6 +37,16 @@ public class BasePage {
         ele.clear();
         ele.sendKeys(value);
     }
+
+
+    protected void fillTextwithdownEnter(By by, String value){
+        WebElement ele=waitForElementToBePresent(by);
+        ele.sendKeys(value);
+        String act= Keys.chord(Keys.ARROW_DOWN,Keys.ENTER);
+        ele.sendKeys(act);
+    }
+
+
 
     protected void click(By by) {
         waitForElementToBePresent(by).click();

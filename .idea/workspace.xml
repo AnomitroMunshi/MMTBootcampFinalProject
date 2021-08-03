@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="de653eb9-9fb2-4499-9139-8d603a77824a" name="Default Changelist" comment="" />
+    <list default="true" id="de653eb9-9fb2-4499-9139-8d603a77824a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/output/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/LandingPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/DateFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/DateFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/SearchHotelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/SearchHotelTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,39 +61,13 @@
       <recent name="Testcases" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SearchHotelTest.gotoHoteltab">
-    <configuration name="JsonReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FileReader.JsonReader" />
+  <component name="RunManager" selected="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (2)">
+    <configuration name="DateFormatter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Utils.DateFormatter" />
       <module name="MMTBootcampFinalProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="FileReader.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="readJSON" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FileReader.readJSON" />
-      <module name="MMTBootcampFinalProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="FileReader.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PageFlow.test" />
-      <module name="MMTBootcampFinalProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="PageFlow.*" />
+          <option name="PATTERN" value="Utils.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -110,31 +93,128 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchHotelTest.searchConfigure" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="/Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (1)" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MMTBootcampFinalProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Testcases.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Testcases" />
-      <option name="MAIN_CLASS_NAME" value="Testcases.SearchHotelTest" />
-      <option name="METHOD_NAME" value="searchConfigure" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="/Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MMTBootcampFinalProject" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MMTBootcampFinalProject" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MMTBootcampFinalProject" />
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="/Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <useClassPathOnly />
+      <option name="SUITE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.DateFormatter" />
+      <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" />
+      <item itemvalue="TestNG.SearchHotelTest.gotoHoteltab" />
+      <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (1)" />
+      <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (2)" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SearchHotelTest.gotoHoteltab" />
-        <item itemvalue="Application.test" />
-        <item itemvalue="TestNG.SearchHotelTest.searchConfigure" />
-        <item itemvalue="Application.readJSON" />
-        <item itemvalue="Application.JsonReader" />
+        <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (2)" />
+        <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (1)" />
+        <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" />
+        <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" />
+        <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" />
       </list>
     </recent_temporary>
   </component>

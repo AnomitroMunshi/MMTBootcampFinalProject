@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="/Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject">
+        <classes>
+            <class name="Testcases.SearchHotelTest">
+                <methods>
+                    <include name="gotoHoteltabTest"/>
+                    <include name="enterLocationTest"/>
+                    <include name="selectDates"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

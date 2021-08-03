@@ -9,8 +9,17 @@ import org.testng.asserts.SoftAssert;
 public class SearchHotelTest extends BaseTest{
 
     @Test
-    public void gotoHoteltab(){
+    public void gotoHoteltabTest(){
         Assert.assertTrue(SearchConfigureFlow.clickMenuTab());
     }
 
+    @Test
+    public void enterLocationTest(){
+        Assert.assertTrue(SearchConfigureFlow.EnterLocation());
+    }
+
+    @Test
+    public void selectDates(){
+        Assert.assertTrue(SearchConfigureFlow.enterDates());
+    }
 }

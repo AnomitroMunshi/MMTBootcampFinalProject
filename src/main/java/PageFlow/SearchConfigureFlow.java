@@ -2,15 +2,17 @@ package PageFlow;
 
 import BO.Constants;
 import BO.TestDatasBO;
-import FileReader.ConfigReader;
 import FileReader.JSONReader;
 import Pages.LandingPage;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
-import java.io.FileReader;
 
 public class SearchConfigureFlow {
 
-    static TestDatasBO testDatasBO=JSONReader.readJOSN();
+    static  Logger logger= LogManager.getLogger(SearchConfigureFlow.class);
+
+    static TestDatasBO testDatas=JSONReader.readJOSN();
     static LandingPage landingPage=new LandingPage();
 
     public static boolean verifyCurrentURL(){
@@ -18,10 +20,27 @@ public class SearchConfigureFlow {
     }
 
     public static boolean clickMenuTab() {
-        System.out.println(testDatasBO.getPageMenu());
-        return landingPage.goToPagetab(testDatasBO.getPageMenu());
+        System.out.println(testDatas.getPageMenu());
+        return landingPage.goToPagetab(testDatas.getPageMenu());
 
     }
+
+    public static boolean EnterLocation(){
+
+        logger.info("City to be entered entered :"+testDatas.getLocation());
+        String city=landingPage.goToLocation(testDatas.getLocation());
+        logger.info("City entered :"+city);
+
+        return (city!=null);
+
+    }
+
+    public static boolean enterDates(){
+        logger.info("Entering checkin and checkout dates");
+        return landingPage.selectDate(testDatas.getCheckInDate(),testDatas.getCheckOutDate());
+    }
+
+
        /* selectLocation(testDatasBO.getLocation());
         selectCheckinDate();
         selectCheckoutDate();*/
