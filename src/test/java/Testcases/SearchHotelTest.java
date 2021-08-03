@@ -22,4 +22,8 @@ public class SearchHotelTest extends BaseTest{
     public void selectDates(){
         Assert.assertTrue(SearchConfigureFlow.enterDates());
     }
+
+    public void selectRoomsAndGuestsTest(){
+
+    }
 }

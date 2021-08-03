@@ -7,6 +7,9 @@ import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
+
+import java.text.ParseException;
 
 public class LandingPage extends BasePage{
 
@@ -17,15 +20,17 @@ public class LandingPage extends BasePage{
 
     //page locators
     By Popup = By.xpath("//div[contains(@class,'autopop')]");
-    By LocationBox=By.xpath("//label[@for='city']");
-    By LocationInput=By.xpath("//input[contains(@placeholder,'Enter city')]");
-    By LocationName=By.cssSelector("#city");
-    By RoomGuestCount=By.xpath("//p[contains(@data-cy,'roomGuestCount')]");
+    By LOCATIONBOX=By.xpath("//label[@for='city']");
+    By LOCATIONINPUT=By.xpath("//input[contains(@placeholder,'Enter city')]");
+    By LOCATIONAME=By.cssSelector("#city");
+    By NEXTDATES=By.xpath("//span[contains(@aria-label,'Next Month')]");
+    By ROOMGUESTCOUNT=By.xpath("//p[contains(@data-cy,'roomGuestCount')]");
+
 
 
     //Dynamic Locators
-    String menuList="//li[@class='menu_%replacable%']";
-    String datePicker="//div[@aria-label='%replacable%' and @aria-disabled='false']";
+    String MENULIST="//li[@class='menu_%replacable%']";
+    String DATEPICKER="//div[@aria-label='%replacable%' and @aria-disabled='false']";
 
 
 
@@ -47,12 +52,12 @@ public class LandingPage extends BasePage{
         logger.info("Clicking on menu: "+pageTab);
         try{
             waitForPageLoad();
-            click(DynamicXpath.get(menuList,pageTab));
+            click(DynamicXpath.get(MENULIST,pageTab));
 
         }catch (Exception e){
             logger.info("Popup found, clicking hotel menu link");
             doActionsMoveByOffset();
-            click(DynamicXpath.get(menuList,pageTab));
+            click(DynamicXpath.get(MENULIST,pageTab));
         }
         return getCurrentUrl().contains("/hotels");
     }
@@ -60,28 +65,40 @@ public class LandingPage extends BasePage{
     public String goToLocation(String city){
 
         try{
-            click(LocationBox);
-            fillTextwithdownEnter(LocationInput,city);
+            click(LOCATIONBOX);
+            fillTextwithdownEnter(LOCATIONINPUT,city);
 
         }catch (Exception e){
             e.printStackTrace();
         }
 
-        return getElement(LocationName).getAttribute("value");
+        return getElement(LOCATIONAME).getAttribute("value");
     }
 
     public boolean selectDate(String chckInDate,String chckOutDate){
-       // while ()
-    try{
-        click(DynamicXpath.get(datePicker, DateFormatter.formatDate(chckInDate)));
-        click(DynamicXpath.get(datePicker,DateFormatter.formatDate(chckOutDate)));
+        while (getElement(NEXTDATES).isDisplayed()){
+            logger.info("next date arrow displayed!");
+            try{
+                click(DynamicXpath.get(DATEPICKER, DateFormatter.formatDate(chckInDate)));
+            }catch (TimeoutException e){
+                click(NEXTDATES);
+            }
+            catch (Exception e){
+                throw new IllegalStateException("Date not foud");
+            }
 
+            try{
+                click(DynamicXpath.get(DATEPICKER,DateFormatter.formatDate(chckOutDate)));
+                break;
+            }catch (TimeoutException e){
+                click(NEXTDATES);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
+        }
 
-    }catch (Exception e){
-        throw new IllegalStateException("Date not foud");
-    }
-    return getElement(RoomGuestCount).isDisplayed();
+    return getElement(ROOMGUESTCOUNT).isDisplayed();
     }
 
 

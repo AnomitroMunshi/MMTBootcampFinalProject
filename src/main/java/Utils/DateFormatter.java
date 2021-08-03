@@ -23,5 +23,6 @@ public class DateFormatter {
 
    /* public static void main(String[] args) throws ParseException {
         formatDate("03/12/2021");
+        21 Sep'21
     }*/
 }
