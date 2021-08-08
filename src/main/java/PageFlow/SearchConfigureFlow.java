@@ -114,4 +114,8 @@ public class SearchConfigureFlow {
         landingPage.inputTravelFor(option);
     }
 
+    public static boolean search(){
+        return landingPage.submitSearch();
+    }
+
 }

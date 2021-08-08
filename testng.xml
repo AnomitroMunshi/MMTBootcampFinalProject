@@ -11,6 +11,7 @@
                     <include name="selectDates"/>
                     <include name="selectRoomsAndGuestsTest"/>
                     <include name="selectTravelFor"/>
+                    <include name="enterSearch"/>
                 </methods>
             </class>
         </classes>

@@ -32,4 +32,9 @@ public class SearchHotelTest extends BaseTest{
     public void selectTravelFor(){
         SearchConfigureFlow.enterTravelFor();
     }
+
+    @Test
+    public void enterSearch(){
+        Assert.assertTrue(SearchConfigureFlow.search());
+    }
 }

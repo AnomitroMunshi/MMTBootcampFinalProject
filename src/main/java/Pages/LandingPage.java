@@ -31,6 +31,7 @@ public class LandingPage extends BasePage{
     By CHILDAGELIST=By.xpath("//ul[contains(@class,'childAgeList')]/li");
     By TRAVELFOR=By.xpath("//div[contains(@class,'travelFor')]");
     By ADDNEWROOM=By.cssSelector(".btnAddRoom");
+    By SEARCHBTN=By.xpath("//button[text()='Search']");
 
 
 
@@ -150,6 +151,12 @@ public class LandingPage extends BasePage{
     public void inputTravelFor(String travelFor){
         click(TRAVELFOR);
         click(DynamicXpath.get(travelForOpt,travelFor));
+    }
+
+    public boolean submitSearch(){
+        click(SEARCHBTN);
+        waitForPageLoad();
+        return getCurrentUrl().contains("/hotel-listing");
     }
 
 }
