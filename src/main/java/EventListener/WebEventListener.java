@@ -1,4 +1,4 @@
-package Listeners;
+package EventListener;
 
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -8,9 +8,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-public class EventListener implements WebDriverEventListener {
+public class WebEventListener implements WebDriverEventListener {
 
-    Logger logger= LogManager.getLogger(EventListener.class);
+    Logger logger= LogManager.getLogger(WebEventListener.class);
 
     @Override
     public void beforeAlertAccept(WebDriver driver) {

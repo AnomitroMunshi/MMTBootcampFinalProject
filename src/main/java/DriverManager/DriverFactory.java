@@ -2,10 +2,12 @@ package DriverManager;
 
 import DriverManager.BrowserType.ChromeDriverManager;
 import DriverManager.BrowserType.FirefoxDriverManager;
+import EventListener.WebEventListener;
 import FileReader.ConfigReader;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 
 public class DriverFactory {
@@ -29,7 +31,12 @@ public class DriverFactory {
                 throw new IllegalStateException("Unsupported BrowserType Provided!");
         }
 
-        thDriver.set(driver);
+        EventFiringWebDriver eventFiringWebDriver=new EventFiringWebDriver(driver);
+        WebEventListener eventListener=new WebEventListener();
+
+        eventFiringWebDriver.register(eventListener);
+
+        thDriver.set(eventFiringWebDriver);
         logger.info("Browser set into threadlocal!");
         getCurrentDriver().manage().window().maximize();
 

@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de653eb9-9fb2-4499-9139-8d603a77824a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/EventListener/WebEventListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BO/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BO/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DriverManager/DriverFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DriverManager/DriverFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/LandingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/DateFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/DateFormatter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Properties/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Properties/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Listeners/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Listeners/WebEventListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/SearchHotelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/SearchHotelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/testdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/testdata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +39,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -44,6 +58,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="configurable.group.language" />
   </component>
@@ -54,6 +69,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/Properties" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="EventListener" />
       <recent name="Utils" />
       <recent name="FileReader" />
       <recent name="Pages" />
@@ -61,12 +77,12 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (2)">
-    <configuration name="DateFormatter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Utils.DateFormatter" />
+    <configuration name="SearchConfigureFlow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="PageFlow.SearchConfigureFlow" />
       <module name="MMTBootcampFinalProject" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Utils.*" />
+          <option name="PATTERN" value="PageFlow.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -74,18 +90,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchHotelTest.gotoHoteltab" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchHotelTest.selectRoomsAndGuestsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MMTBootcampFinalProject" />
+      <useClassPathOnly />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Testcases.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="SUITE_NAME" value="" />
       <option name="PACKAGE_NAME" value="Testcases" />
       <option name="MAIN_CLASS_NAME" value="Testcases.SearchHotelTest" />
-      <option name="METHOD_NAME" value="gotoHoteltab" />
+      <option name="METHOD_NAME" value="selectRoomsAndGuestsTest" />
+      <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
       <properties />
       <listeners />
       <method v="2">
@@ -201,18 +227,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DateFormatter" />
-      <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" />
-      <item itemvalue="TestNG.SearchHotelTest.gotoHoteltab" />
+      <item itemvalue="Application.SearchConfigureFlow" />
+      <item itemvalue="TestNG.SearchHotelTest.selectRoomsAndGuestsTest" />
       <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (1)" />
       <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (2)" />
+      <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (2)" />
+        <item itemvalue="TestNG.SearchHotelTest.selectRoomsAndGuestsTest" />
+        <item itemvalue="Application.SearchConfigureFlow" />
         <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (1)" />
-        <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" />
-        <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" />
         <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" />
       </list>
     </recent_temporary>

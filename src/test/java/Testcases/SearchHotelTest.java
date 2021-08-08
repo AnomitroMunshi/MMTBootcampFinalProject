@@ -15,7 +15,7 @@ public class SearchHotelTest extends BaseTest{
 
     @Test
     public void enterLocationTest(){
-        Assert.assertTrue(SearchConfigureFlow.EnterLocation());
+        Assert.assertTrue(SearchConfigureFlow.enterLocation());
     }
 
     @Test
@@ -23,7 +23,13 @@ public class SearchHotelTest extends BaseTest{
         Assert.assertTrue(SearchConfigureFlow.enterDates());
     }
 
+    @Test
     public void selectRoomsAndGuestsTest(){
+        SearchConfigureFlow.enterRoomsAndGuests();
+    }
 
+    @Test
+    public void selectTravelFor(){
+        SearchConfigureFlow.enterTravelFor();
     }
 }

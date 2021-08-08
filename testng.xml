@@ -9,6 +9,8 @@
                     <include name="gotoHoteltabTest"/>
                     <include name="enterLocationTest"/>
                     <include name="selectDates"/>
+                    <include name="selectRoomsAndGuestsTest"/>
+                    <include name="selectTravelFor"/>
                 </methods>
             </class>
         </classes>

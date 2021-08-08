@@ -8,8 +8,10 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
+import org.openqa.selenium.WebElement;
 
 import java.text.ParseException;
+import java.util.List;
 
 public class LandingPage extends BasePage{
 
@@ -25,12 +27,22 @@ public class LandingPage extends BasePage{
     By LOCATIONAME=By.cssSelector("#city");
     By NEXTDATES=By.xpath("//span[contains(@aria-label,'Next Month')]");
     By ROOMGUESTCOUNT=By.xpath("//p[contains(@data-cy,'roomGuestCount')]");
+    By SUBMITROOMGUEST=By.xpath("//button[contains(@data-cy,'submitGuest')]");
+    By CHILDAGELIST=By.xpath("//ul[contains(@class,'childAgeList')]/li");
+    By TRAVELFOR=By.xpath("//div[contains(@class,'travelFor')]");
+    By ADDNEWROOM=By.cssSelector(".btnAddRoom");
+
+
 
 
 
     //Dynamic Locators
     String MENULIST="//li[@class='menu_%replacable%']";
     String DATEPICKER="//div[@aria-label='%replacable%' and @aria-disabled='false']";
+    String ADULTCOUNT= "//ul[@data-cy='adultCount']/li[@data-cy='adults-%replacable%']";
+    String CHILDCOUNT= "//li[@data-cy='children-%replacable%']";
+    String CHILDLISTEACH="//ul[contains(@class,'childAgeList')]/li[%replacable%]/label/select";
+    String travelForOpt="//li[@data-cy='travelFor-%replacable%']";
 
 
 
@@ -101,5 +113,43 @@ public class LandingPage extends BasePage{
     return getElement(ROOMGUESTCOUNT).isDisplayed();
     }
 
+    public void inputRoomsAndGuest(String noOfRooms, String noOfAdults, String noOfChildren, List<String> childrenages){
+        if(Integer.parseInt(noOfRooms)<1)
+            throw  new IllegalStateException("No.of rooms cannot be less than 1");
+
+             click(ROOMGUESTCOUNT);
+             inputAdultAndChildren(noOfAdults,noOfChildren,childrenages);
+
+        if(Integer.parseInt(noOfRooms)>1){
+            //implementation when no.of rooms >1
+        }
+        click(SUBMITROOMGUEST);
+    }
+
+    private void inputAdultAndChildren(String noOfAdults,String noOfChildren,List<String> childrenages){
+        System.out.println("no.of adults="+noOfAdults);
+        click(DynamicXpath.get(ADULTCOUNT,noOfAdults));
+
+        if(Integer.parseInt(noOfChildren)>0){
+            click(DynamicXpath.get(CHILDCOUNT,noOfChildren));
+            inputChildrenAge(childrenages);
+        }else{
+            click(DynamicXpath.get(CHILDCOUNT,noOfChildren));
+        }
+    }
+
+    private void inputChildrenAge(List<String> childrenages){
+        List<WebElement> childAgeDropdown=getElements(CHILDAGELIST);
+        for(int i=0;i<childAgeDropdown.size();i++){
+
+            doSelectDropDownByVisibleText(DynamicXpath.get(CHILDLISTEACH,String.valueOf(i+1)),childrenages.get(i));
+
+        }
+    }
+
+    public void inputTravelFor(String travelFor){
+        click(TRAVELFOR);
+        click(DynamicXpath.get(travelForOpt,travelFor));
+    }
 
 }

@@ -6,6 +6,7 @@ import org.apache.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
@@ -60,18 +61,7 @@ public class BasePage {
         return waitForElementToBePresent(by).getText();
     }
 
-    protected List<String> getElementsTextList(By by) {
-        List<String> eleTextList = new ArrayList<String>();
 
-        List<WebElement> eleList = waitForAllElementsToBeVisible(by);
-        for (WebElement e : eleList) {
-            if (!e.getText().isEmpty()) {
-                eleTextList.add(e.getText());
-            }
-        }
-
-        return eleTextList;
-    }
 
     protected  WebElement getElement(By by){
         return waitForElementToBePresent(by);
@@ -85,11 +75,20 @@ public class BasePage {
         return wait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
-    private List<WebElement> waitForAllElementsToBeVisible(By by){
-        return wait.until(ExpectedConditions.visibilityOfAllElements((List<WebElement>) by));
+
+    protected List<WebElement> getElements(By by) {
+        return driver.findElements(by);
     }
 
 
+
+
+    /*======Dropdown=====*/
+
+    protected void doSelectDropDownByVisibleText(By by, String visibletext) {
+        Select select = new Select(waitForElementToBePresent(by));
+        select.selectByVisibleText(visibletext);
+    }
 
 
 
