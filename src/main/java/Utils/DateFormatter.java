@@ -20,9 +20,21 @@ public class DateFormatter {
 
         return formattedDate;
     }
+    public static String formatDateWithComma(String dateString) throws ParseException {
+        String formattedDate;
+        Format formatter;
+
+        Date newdate=new SimpleDateFormat("dd/MM/yyyy").parse(dateString);
+        formatter = new SimpleDateFormat("E, dd MMM yyyy");
+        formattedDate = formatter.format(newdate);
+        System.out.println(formattedDate);
+
+        return formattedDate;
+    }
+
 
    /* public static void main(String[] args) throws ParseException {
-        formatDate("03/12/2021");
-        21 Sep'21
+        formatDateWithComma("23/09/2021");
+
     }*/
 }

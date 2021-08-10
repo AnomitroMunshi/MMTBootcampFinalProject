@@ -43,7 +43,6 @@ public class SearchConfigureFlow {
         return landingPage.selectDate(ConfigReader.getProperty("CheckInDate"),ConfigReader.getProperty("CheckOutDate"));
     }
 
-
     public static void enterRoomsAndGuests(){
       logger.info("Entering ROoms ,guests and children");
         List<String> childrenages = new ArrayList<>();
@@ -73,29 +72,6 @@ public class SearchConfigureFlow {
         }
 
 
-
-
-
-
-
-        /*if(Integer.parseInt(noOfChildren)>0 && Integer.parseInt(noOfChildren)==childrenages.length){
-            if(ConfigReader.getProperty("ChildrenAge")!=null){
-                System.out.println("Child array="+ Arrays.toString(childrenages));
-                landingPage.inputRoomsAndGuest(noOfRooms,noOfAdults,noOfChildren,childrenages);
-
-
-            }
-
-            else
-                throw new IllegalStateException("ChildrenAge cannot be null ,less or more than no.of children");
-
-        }else if(Integer.parseInt(noOfChildren)==0 && childrenages==null){
-
-        }*/
-
-
-
-       // return true;
     }
 
     public static void enterTravelFor(){
@@ -116,6 +92,7 @@ public class SearchConfigureFlow {
 
     public static boolean search(){
         return landingPage.submitSearch();
+
     }
 
 }
