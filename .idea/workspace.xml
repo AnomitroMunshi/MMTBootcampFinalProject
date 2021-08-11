@@ -8,11 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/output/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/output/log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BO/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BO/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/SearchListingFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/SearchListingFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/SearchListing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/SearchListing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/DateFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/DateFormatter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Properties/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Properties/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/SearchListingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/SearchListingTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,10 +217,11 @@
     </configuration>
     <list>
       <item itemvalue="Application.SearchConfigureFlow" />
+      <item itemvalue="Application.DateFormatter" />
+      <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" />
       <item itemvalue="TestNG.SearchHotelTest.selectRoomsAndGuestsTest" />
       <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (1)" />
       <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (2)" />
-      <item itemvalue="Application.DateFormatter" />
     </list>
     <recent_temporary>
       <list>

@@ -7,8 +7,9 @@ import Pages.SearchListing;
 import Utils.DateFormatter;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
+import org.openqa.selenium.WebElement;
 
-
+import java.util.List;
 
 
 public class SearchListingFlow {
@@ -67,7 +68,11 @@ public class SearchListingFlow {
 
     public static boolean applySearchFilter(){
 
-        return false;
+        searchListingPage.selectPriceRange();
+        searchListingPage.selectUserRating();
+
+
+        return searchListingPage.verifyFilters();
     }
 
     public static boolean assertSearchFilter(){

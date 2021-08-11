@@ -17,8 +17,8 @@
             <class name="Testcases.SearchListingTest">
                 <methods>
                     <include name="checkSearchCriteriaTest"/>
-                   <!-- <include name="setFilterTest"/>
-                    <include name="checkFilterTest"/>-->
+                   <include name="setFilterTest"/>
+                    <!-- <include name="checkFilterTest"/>-->
 
                 </methods>
             </class>

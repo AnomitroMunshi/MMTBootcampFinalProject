@@ -39,6 +39,11 @@ public class BasePage {
         ele.sendKeys(value);
     }
 
+    protected void fillTextWithKey(By by, Keys k) {
+        WebElement ele = waitForElementToBePresent(by);
+        ele.clear();
+        ele.sendKeys(k);
+    }
 
     protected void fillTextwithdownEnter(By by, String value){
         WebElement ele=waitForElementToBePresent(by);
@@ -71,15 +76,21 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
+    public WebElement waitForElementVisibleWithCustomTimeOut(By by, int timeOut) {
+        WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+    }
+
     private WebElement waitForElementToBeClickable(By by){
         return wait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
 
+
+
     protected List<WebElement> getElements(By by) {
         return driver.findElements(by);
     }
-
 
 
 
@@ -110,6 +121,12 @@ public class BasePage {
         act.moveByOffset(100,300).click().perform();
     }
 
+    public void doActionsDragAndDrop(By by,int offset){
+        Actions act = new Actions(driver);
+        act.dragAndDropBy(waitForElementToBePresent(by),offset,0).perform();
+    }
+
+
 
 
     /*=====Javascript Executors=====*/
@@ -129,6 +146,12 @@ public class BasePage {
         js.executeScript("arguments[0].scrollIntoView(true);", by);
     }
 
+
+    public void scrollIntoViewByPixels(String pixels) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,"+pixels+")", "");
+    }
+
     public void scrollPageDown() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
@@ -145,31 +168,12 @@ public class BasePage {
         return js.executeScript("return document.documentElement.innerText;").toString();
     }
 
-    public void drawBorder(By by) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].style.border='3px solid red'", by);
+
+
+    /*====Refresh page====*/
+
+    public void refreshBrowser(){
+        driver.navigate().refresh();
     }
-
-
-    /*=====Javascript Utility=====*/
-
-    public void flash(WebElement element) {
-        String bgcolor = element.getCssValue("backgroundColor");
-        for (int i = 0; i < 15; i++) {
-            changeColor("rgb(0,200,0)", element);// 1
-            changeColor(bgcolor, element);// 2
-        }
-    }
-
-    private void changeColor(String color, WebElement element) {
-        JavascriptExecutor js = ((JavascriptExecutor) driver);
-        js.executeScript("arguments[0].style.backgroundColor = '" + color + "'", element);
-
-        try {
-            Thread.sleep(20);
-        } catch (InterruptedException e) {
-        }
-    }
-
 
 }
