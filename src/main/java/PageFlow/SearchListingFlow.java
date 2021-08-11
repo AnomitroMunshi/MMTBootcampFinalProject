@@ -65,18 +65,17 @@ public class SearchListingFlow {
         && checkOutDateInApp.equalsIgnoreCase(checkOutInput) && guestCountInApp.equalsIgnoreCase(totalGuests));
     }
 
-
     public static boolean applySearchFilter(){
 
         searchListingPage.selectPriceRange();
         searchListingPage.selectUserRating();
-
-
         return searchListingPage.verifyFilters();
     }
 
-    public static boolean assertSearchFilter(){
-        return false;
+    public static boolean selectHotel(){
+
+       String hotelName = searchListingPage.getHotelDetails();
+       return searchListingPage.switchWindowTab(hotelName);
     }
 
 }

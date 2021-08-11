@@ -2,13 +2,17 @@ package Pages;
 
 import BO.Constants;
 import FileReader.ConfigReader;
+import Utils.DynamicXpath;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
+import java.util.Set;
 
 public class SearchListing extends BasePage{
 
@@ -22,21 +26,21 @@ public class SearchListing extends BasePage{
     By CHECKOUTDATE=By.id("checkout");
     By GUESTBOX=By.id("guest");
 
-    By FIRSTHOTEL=By.xpath("Listing_hotel_0");
+
     By MINVALUE=By.xpath("//span[@class='minValue']");
     By MAXVALUE=By.xpath("//span[@class='maxValue']");
-   // By MINSLIDER=By.xpath("//div[@role='slider' and @aria-valuemin='0']");
     By MINSLIDER=By.xpath("//div[@id='PRICE']//span[1]//div[1]");
-  //  By MAXSLIDER=By.xpath("//div[@role='slider' and @aria-valuemin='1']");
     By MAXSLIDER=By.xpath("//div[@id='PRICE']//span[2]//div[1]");
 
     By USERRATINGLIST=By.xpath("//div[@id='USER_RATING']//ul[contains(@class,'filterList')]/li");
     By APPLIEDFILTERS=By.xpath("//ul[contains(@class,'appliedFilters')]/li");
 
+    By HOTELLIST=By.xpath("//div[contains(@id,'Listing_hotel')]");
+
 
 
     //Dynamic Locators
-    String MENULIST="//li[@class='menu_%replacable%']";
+    String HOTELNAME="//div[@id='Listing_hotel_%replacable%']/a//p[contains(@id,'hotel_name')]/span[1]";
 
 
     //page functions
@@ -72,7 +76,9 @@ public class SearchListing extends BasePage{
         String[] maxprice=getText(MAXVALUE).split(" ");
         FILTERMAXPRICE=maxprice[1];
         System.out.println(FILTERMAXPRICE);
+
         refreshBrowser();
+
         doActionsMoveToElement(MINSLIDER);
         doActionsDragAndDrop(MINSLIDER, Constants.MINSLIDER);
         System.out.println(getText(MINVALUE));
@@ -110,6 +116,43 @@ public class SearchListing extends BasePage{
             return false;
     }
 
+    public String getHotelDetails(){
+        waitForElementVisibleWithCustomTimeOut(HOTELLIST,Constants.CUSTOMTIMEOUT_10SEC);
+        List<WebElement> hotelList=getElements(HOTELLIST);
+        String hotelName;
+        if(hotelList.size()>0){
+            By XPATH;
+            if(hotelList.size()>5){
+                XPATH=DynamicXpath.get(HOTELNAME,"4");
+                doActionsMoveToElement(XPATH);
+                hotelName= getText(XPATH);
+                click(XPATH);
+            }
+            else {
+                XPATH=DynamicXpath.get(HOTELNAME, String.valueOf(hotelList.size() - 1));
+                doActionsMoveToElement(XPATH);
+                hotelName = getText(XPATH);
+                click(XPATH);
+            }
+
+        }else
+            throw new IllegalStateException("No hotels found");
+
+        logger.info("Hotel Name :"+hotelName);
+        return hotelName;
+    }
+
+    public boolean switchWindowTab(String hotelName){
+
+        String currentWindowID=getCurrentWindow();
+        Set<String> allWindowhandles=getAllWindows();
+        for(String windowId:allWindowhandles){
+            if(!windowId.equals(currentWindowID))
+                switchToWindow(windowId);
+        }
+        logger.info(hotelName);
+        return getTitle().contains(hotelName);
+    }
 
 
 

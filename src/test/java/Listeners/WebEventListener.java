@@ -14,27 +14,27 @@ public class WebEventListener implements WebDriverEventListener {
 
     @Override
     public void beforeAlertAccept(WebDriver driver) {
-
+        logger.info("Accepting alert");
     }
 
     @Override
     public void afterAlertAccept(WebDriver driver) {
-
+        logger.info("Alert accepted");
     }
 
     @Override
     public void afterAlertDismiss(WebDriver driver) {
-
+        logger.info("Dismissing alert");
     }
 
     @Override
     public void beforeAlertDismiss(WebDriver driver) {
-
+        logger.info("Alert Dismissed");
     }
 
     @Override
     public void beforeNavigateTo(String url, WebDriver driver) {
-        logger.info("Trying to GoToURL to :: "+url);
+        logger.info("Navigating to :: "+url);
     }
 
     @Override
@@ -114,12 +114,12 @@ public class WebEventListener implements WebDriverEventListener {
 
     @Override
     public void beforeSwitchToWindow(String windowName, WebDriver driver) {
-        logger.info("Trying to switch to wimndow :: "+windowName);
+        logger.info("Trying to switch to window :: "+windowName);
     }
 
     @Override
     public void afterSwitchToWindow(String windowName, WebDriver driver) {
-        logger.info("Swtched to wimndow :: "+windowName);
+        logger.info("Swtched to window :: "+windowName);
     }
 
     @Override
@@ -134,16 +134,16 @@ public class WebEventListener implements WebDriverEventListener {
 
     @Override
     public <X> void afterGetScreenshotAs(OutputType<X> target, X screenshot) {
-        logger.info("Captured Screenshot!!");
+        logger.info("Captured Screenshot!! Check output folder");
     }
 
     @Override
     public void beforeGetText(WebElement element, WebDriver driver) {
-        logger.info("trying to getting text on "+element);
+        logger.info("Trying to get Text on "+element);
     }
 
     @Override
     public void afterGetText(WebElement element, WebDriver driver, String text) {
-        logger.info("Getting text on "+element+" :: "+text);
+        logger.info("Text found on "+element+" :: "+text);
     }
 }

@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 public class BasePage {
     private WebDriver driver;
@@ -33,16 +34,14 @@ public class BasePage {
         driver.get(url);
     }
 
+    protected String getTitle(){
+        return driver.getTitle();
+    }
+
     protected void fillText(By by, String value) {
         WebElement ele = waitForElementToBePresent(by);
         ele.clear();
         ele.sendKeys(value);
-    }
-
-    protected void fillTextWithKey(By by, Keys k) {
-        WebElement ele = waitForElementToBePresent(by);
-        ele.clear();
-        ele.sendKeys(k);
     }
 
     protected void fillTextwithdownEnter(By by, String value){
@@ -51,8 +50,6 @@ public class BasePage {
         String act= Keys.chord(Keys.ARROW_DOWN,Keys.ENTER);
         ele.sendKeys(act);
     }
-
-
 
     protected void click(By by) {
         waitForElementToBePresent(by).click();
@@ -65,8 +62,6 @@ public class BasePage {
     protected String getText(By by) {
         return waitForElementToBePresent(by).getText();
     }
-
-
 
     protected  WebElement getElement(By by){
         return waitForElementToBePresent(by);
@@ -85,13 +80,21 @@ public class BasePage {
         return wait.until(ExpectedConditions.elementToBeClickable(by));
     }
 
-
-
-
     protected List<WebElement> getElements(By by) {
         return driver.findElements(by);
     }
 
+
+    /*==== WINDOW HANDLES====*/
+    public void switchToWindow(String windowId) {
+        driver.switchTo().window(windowId);
+    }
+    public String getCurrentWindow(){
+       return driver.getWindowHandle();
+    }
+    public Set<String> getAllWindows(){
+       return driver.getWindowHandles();
+    }
 
 
     /*======Dropdown=====*/

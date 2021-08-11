@@ -12,13 +12,14 @@ public class SearchListingTest extends BaseTest{
     }
 
     @Test
-    public void setFilterTest(){
+    public void setAndVerifyFilterTest(){
         Assert.assertTrue(SearchListingFlow.applySearchFilter());
     }
 
     @Test
-    public void checkFilterTest(){
-        Assert.assertTrue(SearchListingFlow.assertSearchFilter());
+    public void selectHotelTest(){
+       Assert.assertTrue(SearchListingFlow.selectHotel());
+
     }
 
 }

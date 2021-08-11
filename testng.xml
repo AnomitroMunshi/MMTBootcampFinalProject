@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
+    <listeners>
+        <listener class-name="Listeners.CustomListener"></listener>
+    </listeners>
     <test verbose="2" preserve-order="true"
           name="/Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject">
         <classes>
@@ -17,8 +20,8 @@
             <class name="Testcases.SearchListingTest">
                 <methods>
                     <include name="checkSearchCriteriaTest"/>
-                   <include name="setFilterTest"/>
-                    <!-- <include name="checkFilterTest"/>-->
+                    <include name="setAndVerifyFilterTest"/>
+                    <include name="selectHotelTest"/>
 
                 </methods>
             </class>
