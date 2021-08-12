@@ -1,15 +1,14 @@
 package Pages;
 
 import BO.Constants;
-import FileReader.ConfigReader;
+
 import Utils.DynamicXpath;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import java.util.List;
 import java.util.Set;
@@ -32,6 +31,7 @@ public class SearchListing extends BasePage{
     By MINSLIDER=By.xpath("//div[@id='PRICE']//span[1]//div[1]");
     By MAXSLIDER=By.xpath("//div[@id='PRICE']//span[2]//div[1]");
 
+    By USERRATINGS=By.xpath("//div[@id='USER_RATING']//ul[contains(@class,'filterList')]");
     By USERRATINGLIST=By.xpath("//div[@id='USER_RATING']//ul[contains(@class,'filterList')]/li");
     By APPLIEDFILTERS=By.xpath("//ul[contains(@class,'appliedFilters')]/li");
 
@@ -88,12 +88,23 @@ public class SearchListing extends BasePage{
     }
 
     public void selectUserRating(){
-        doActionsMoveToElement(USERRATINGLIST);
+        doActionsMoveToElement(USERRATINGS);
         List<WebElement> userRatings=  getElements(USERRATINGLIST);
         System.out.println(userRatings.size());
+
         for(WebElement e:userRatings){
             if(e.getText().contains(Constants.RATINGFILTER))
-                e.click();
+                try{
+                    e.click();
+                    break;
+                }catch (ElementClickInterceptedException exception){
+                    logger.info("Lets wait for 10 sec");
+                    doActionsMoveToElement(USERRATINGLIST);
+                    waitForElementToBeClickableWithCustomTimeOut(USERRATINGS,Constants.CUSTOMTIMEOUT_10SEC);
+                    e.click();
+                    break;
+                }
+
         }
 
     }

@@ -71,10 +71,16 @@ public class BasePage {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
 
-    public WebElement waitForElementVisibleWithCustomTimeOut(By by, int timeOut) {
+    protected WebElement waitForElementVisibleWithCustomTimeOut(By by, int timeOut) {
         WebDriverWait wait = new WebDriverWait(driver, timeOut);
         return wait.until(ExpectedConditions.visibilityOfElementLocated(by));
     }
+
+    protected WebElement waitForElementToBeClickableWithCustomTimeOut(By by, int timeOut) {
+        WebDriverWait wait = new WebDriverWait(driver, timeOut);
+        return wait.until(ExpectedConditions.elementToBeClickable(by));
+    }
+
 
     private WebElement waitForElementToBeClickable(By by){
         return wait.until(ExpectedConditions.elementToBeClickable(by));

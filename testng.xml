@@ -22,7 +22,11 @@
                     <include name="checkSearchCriteriaTest"/>
                     <include name="setAndVerifyFilterTest"/>
                     <include name="selectHotelTest"/>
-
+                </methods>
+            </class>
+            <class name="Testcases.HotelDetailsTest">
+                <methods>
+                    <include name="verifyRecommendedRooms"/>
                 </methods>
             </class>
         </classes>

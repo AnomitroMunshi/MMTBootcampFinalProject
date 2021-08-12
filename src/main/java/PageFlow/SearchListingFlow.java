@@ -7,9 +7,6 @@ import Pages.SearchListing;
 import Utils.DateFormatter;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 
 public class SearchListingFlow {
