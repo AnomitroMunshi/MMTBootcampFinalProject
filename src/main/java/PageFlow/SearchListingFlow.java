@@ -14,6 +14,7 @@ public class SearchListingFlow {
     static  Logger logger= LogManager.getLogger(SearchListingFlow.class);
     static SearchListing searchListingPage=new SearchListing();
 
+
     public static boolean assertSearchCriteria(){
 
         String LocationInput="";
@@ -72,6 +73,7 @@ public class SearchListingFlow {
     public static boolean selectHotel(){
 
        String hotelName = searchListingPage.getHotelDetails();
+
        return searchListingPage.switchWindowTab(hotelName);
     }
 

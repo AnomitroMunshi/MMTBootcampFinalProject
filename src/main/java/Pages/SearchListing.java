@@ -128,6 +128,7 @@ public class SearchListing extends BasePage{
     }
 
     public String getHotelDetails(){
+
         waitForElementVisibleWithCustomTimeOut(HOTELLIST,Constants.CUSTOMTIMEOUT_10SEC);
         List<WebElement> hotelList=getElements(HOTELLIST);
         String hotelName;
@@ -150,6 +151,7 @@ public class SearchListing extends BasePage{
             throw new IllegalStateException("No hotels found");
 
         logger.info("Hotel Name :"+hotelName);
+        Constants.hotelName=hotelName;
         return hotelName;
     }
 

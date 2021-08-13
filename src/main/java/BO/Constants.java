@@ -16,4 +16,8 @@ public class Constants {
     public static final String RATINGFILTER="4 & above";
 
 
+    public static String hotelName="";
+    public static int totatHotelCost=0;
+
+
 }

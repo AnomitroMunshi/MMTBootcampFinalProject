@@ -8,4 +8,11 @@
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="15" project-jdk-type="JavaSDK" />
+  <component name="SuppressABINotification">
+    <option name="modulesWithSuppressedNotConfigured">
+      <set>
+        <option value="MMTBootcampFinalProject" />
+      </set>
+    </option>
+  </component>
 </project>

@@ -26,7 +26,8 @@
             </class>
             <class name="Testcases.HotelDetailsTest">
                 <methods>
-                    <include name="verifyRecommendedRooms"/>
+                    <include name="verifyRecommendedRoomsTest"/>
+                    <include name="addRoomsToCartAndVerifyTest"/>
                 </methods>
             </class>
         </classes>
