@@ -2,6 +2,7 @@ package PageFlow;
 
 import BO.Constants;
 
+import BO.HotelDetailsBO;
 import FileReader.ConfigReader;
 import FileReader.JSONReader;
 import Pages.LandingPage;
@@ -28,27 +29,24 @@ public class SearchConfigureFlow {
 
     }
 
-    public static boolean enterLocation(){
+    public static boolean enterLocation(String Location){
 
-        logger.info("City to be entered entered :"+ConfigReader.getProperty("Location"));
-        String city=landingPage.goToLocation(ConfigReader.getProperty("Location"));
+        logger.info("City to be entered entered :"+Location);
+        String city=landingPage.goToLocation(Location);
         logger.info("City entered :"+city);
 
         return (city!=null);
 
     }
 
-    public static boolean enterDates(){
+    public static boolean enterDates(String checkin,String checkout){
         logger.info("Entering checkin and checkout dates");
-        return landingPage.selectDate(ConfigReader.getProperty("CheckInDate"),ConfigReader.getProperty("CheckOutDate"));
+        return landingPage.selectDate(checkin,checkout);
     }
 
-    public static void enterRoomsAndGuests(){
+    public static void enterRoomsAndGuests(String noOfRooms,String noOfAdults,String noOfChildren,String ChildrenAge){
       logger.info("Entering ROoms ,guests and children");
         List<String> childrenages = new ArrayList<>();
-        String noOfRooms=ConfigReader.getProperty("NoOfRooms");
-        String noOfAdults=ConfigReader.getProperty("NoOfAdults");
-        String noOfChildren=ConfigReader.getProperty("NoOfChildren");
 
         //segregating childeren ages based on no.of childeren
         if(Integer.parseInt(noOfChildren)>1){ 
@@ -74,8 +72,7 @@ public class SearchConfigureFlow {
 
     }
 
-    public static void enterTravelFor(){
-        String travelFor=ConfigReader.getProperty("TravellingFor");
+    public static void enterTravelFor(String travelFor){
         String option=null;
         switch (travelFor.toUpperCase()){
             case "WORK":

@@ -5,18 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de653eb9-9fb2-4499-9139-8d603a77824a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/output/log.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/BO/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BO/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/HotelDetailsFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/HotelDetailsFlow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/SearchListingFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/SearchListingFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HotelDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HotelDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/SearchListing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/SearchListing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/DynamicXpath.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/DynamicXpath.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/HotelDetailsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/HotelDetailsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/DateFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/DateFormatter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Properties/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Properties/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/SearchHotelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/SearchHotelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,19 +101,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchConfigureFlow" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="PageFlow.SearchConfigureFlow" />
-      <module name="MMTBootcampFinalProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="PageFlow.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SearchHotelTest.selectRoomsAndGuestsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="MMTBootcampFinalProject" />
       <useClassPathOnly />
@@ -130,6 +114,34 @@
       <option name="PACKAGE_NAME" value="Testcases" />
       <option name="MAIN_CLASS_NAME" value="Testcases.SearchHotelTest" />
       <option name="METHOD_NAME" value="selectRoomsAndGuestsTest" />
+      <option name="GROUP_NAME" value="" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
+      <option name="PARAMETERS" value="" />
+      <option name="OUTPUT_DIRECTORY" value="" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="PROPERTIES_FILE" value="" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test1.testt" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="MMTBootcampFinalProject" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SomeTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SUITE_NAME" value="" />
+      <option name="PACKAGE_NAME" value="SomeTest" />
+      <option name="MAIN_CLASS_NAME" value="SomeTest.Test1" />
+      <option name="METHOD_NAME" value="testt" />
       <option name="GROUP_NAME" value="" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
@@ -165,27 +177,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="/Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <useClassPathOnly />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="GROUP_NAME" value="" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <option name="VM_PARAMETERS" value="-ea -Dtestng.dtd.http=true" />
-      <option name="PARAMETERS" value="" />
-      <option name="OUTPUT_DIRECTORY" value="" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="wholeProject" />
-      </option>
-      <option name="PROPERTIES_FILE" value="" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="TestNG">
       <useClassPathOnly />
       <option name="SUITE_NAME" value="" />
@@ -206,19 +197,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SearchConfigureFlow" />
       <item itemvalue="Application.DateFormatter" />
+      <item itemvalue="Application.IntegerExtractor" />
       <item itemvalue="TestNG.SearchHotelTest.selectRoomsAndGuestsTest" />
       <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (2)" />
-      <item itemvalue="Application.IntegerExtractor" />
+      <item itemvalue="TestNG.Test1.testt" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="TestNG./Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/testng.xml (2)" />
-        <item itemvalue="Application.IntegerExtractor" />
+        <item itemvalue="TestNG.Test1.testt" />
         <item itemvalue="Application.DateFormatter" />
+        <item itemvalue="Application.IntegerExtractor" />
         <item itemvalue="TestNG.SearchHotelTest.selectRoomsAndGuestsTest" />
-        <item itemvalue="Application.SearchConfigureFlow" />
       </list>
     </recent_temporary>
   </component>

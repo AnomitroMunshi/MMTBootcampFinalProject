@@ -1,7 +1,9 @@
 package Testcases;
 
+import BO.HotelDetailsBO;
 import DriverManager.DriverFactory;
 import FileReader.ConfigReader;
+import FileReader.DataReader;
 import FileReader.JSONReader;
 import PageFlow.GoToLandingPage;
 import org.apache.log4j.LogManager;
@@ -13,6 +15,7 @@ import org.testng.annotations.*;
 public class BaseTest {
 
 	Logger logger= LogManager.getLogger(BaseTest.class);
+	HotelDetailsBO hotelDetailsBO=new HotelDetailsBO();
 
 	@BeforeSuite
 	public void setPrerequisites() {
@@ -20,6 +23,10 @@ public class BaseTest {
 		logger.info("Reading all config file");
 		new ConfigReader();
 		logger.info("Config file read & loaded");
+
+		logger.info("Mapping datas from properties to BO class");
+		DataReader.getValuesFromFile(hotelDetailsBO);
+
 
 		// initialize log properties
 		logger.info("Initializing log properties");

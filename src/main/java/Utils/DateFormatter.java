@@ -32,9 +32,22 @@ public class DateFormatter {
         return formattedDate;
     }
 
+    public static String formatDateForReviewPage(String dateString) throws ParseException {
+        String formattedDate;
+        Format formatter;
 
-   /* public static void main(String[] args) throws ParseException {
-        formatDateWithComma("23/09/2021");
+        Date newdate=new SimpleDateFormat("dd/MM/yyyy").parse(dateString);
+        formatter = new SimpleDateFormat("dd MMM yyyy");
+        formattedDate = formatter.format(newdate);
+        System.out.println(formattedDate);
+
+        return formattedDate;
+    }
+
+
+    /*public static void main(String[] args) throws ParseException {
+        formatDateForReviewPage("23/09/2021");
+
 
     }*/
 }

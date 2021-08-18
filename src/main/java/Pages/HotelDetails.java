@@ -33,7 +33,7 @@ public class HotelDetails extends BasePage{
 
     //Dynamic xpath
     String SPECIFICRECOMMENDBOX="//section[@id='RoomType']/div/div[%replacable%]";
-    String GUESTCOUNTINRECOMMBOX="//section[@id='RoomType']/div/div[%replacable%]//div[contains(@class,'roomRow')]//p[2]";
+    String GUESTCOUNTINRECOMMBOX="//section[@id='RoomType']//div[contains(@class,'roomRow')][%replacable%]//p[text()='Adults']";
     String GUESTLISTDROPDOWNEACH="//ul[@class='ddList']/li[%replacable%]";
 
     //page functions
@@ -77,6 +77,7 @@ public class HotelDetails extends BasePage{
             if(totalAdult==Integer.parseInt(adultsCount) && totalChildren==Integer.parseInt(childernCount))
                 flag++;
         }
+
         return (flag==recommendationBoxList.size());
     }
 
@@ -112,7 +113,7 @@ public class HotelDetails extends BasePage{
         int ageArrayindex=0;
         String[] adultChildAgeinArray=countAdultCildren.split(" ");
         for(int i=0;i<adultChildAgeinArray.length;i++){
-            //System.out.println("adultChildAgeinArray["+i+"]="+adultChildAgeinArray[i]);
+            System.out.println("adultChildAgeinArray["+i+"]="+adultChildAgeinArray[i]);
             if(adultChildAgeinArray[i].charAt(0)>47 && adultChildAgeinArray[i].charAt(0)<59){
                 ageArray[ageArrayindex]=Integer.parseInt(adultChildAgeinArray[i]);
                 ageArrayindex++;
@@ -168,6 +169,7 @@ public class HotelDetails extends BasePage{
     public boolean verifyCart(String noOfAdults,String noOfChildren){
         List<WebElement> totalPriceList=getElements(EACHROOMPRICE);
         System.out.println("Total no.of room with price="+totalPriceList.size());
+        Constants.totalRoomsBooked=totalPriceList.size();
         int totalPrice=0;
         int flag=0;
         for(WebElement e:totalPriceList){
@@ -175,16 +177,17 @@ public class HotelDetails extends BasePage{
             logger.info("Total price now="+totalPrice);
         }
         Constants.totatHotelCost=totalPrice;
-        if(totalPrice== IntegerExtractor.extract(getText(TOTALPRICEINCART))){
+        logger.info("Matching with cart value");
+        if(totalPrice == IntegerExtractor.extract(getText(TOTALPRICEINCART))){
+            logger.info("Total price is correct");
             flag++;
         }
-
         Map<String,Integer> guestMap=addTotalAdultsChildren(getText(TOTALGUESTSINCART));
         if((Integer.parseInt(noOfAdults)==guestMap.get("Adults") &&  Integer.parseInt(noOfChildren)==guestMap.get("Children"))){
             logger.info("Guest count is correct");
             flag++;
         }
-
+        logger.info("Current flag value="+flag);
         if(flag==2){
             click(REVEIWBTN);
         }

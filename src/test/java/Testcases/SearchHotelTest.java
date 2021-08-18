@@ -1,5 +1,6 @@
 package Testcases;
 
+import BO.HotelDetailsBO;
 import BO.TestDatasBO;
 import PageFlow.SearchConfigureFlow;
 import org.testng.Assert;
@@ -8,6 +9,8 @@ import org.testng.asserts.SoftAssert;
 
 public class SearchHotelTest extends BaseTest{
 
+    HotelDetailsBO hotelDetails=hotelDetailsBO;
+
     @Test
     public void gotoHoteltabTest(){
         Assert.assertTrue(SearchConfigureFlow.clickMenuTab());
@@ -15,22 +18,22 @@ public class SearchHotelTest extends BaseTest{
 
     @Test
     public void enterLocationTest(){
-        Assert.assertTrue(SearchConfigureFlow.enterLocation());
+        Assert.assertTrue(SearchConfigureFlow.enterLocation(hotelDetails.getLocation()));
     }
 
     @Test
     public void selectDates(){
-        Assert.assertTrue(SearchConfigureFlow.enterDates());
+        Assert.assertTrue(SearchConfigureFlow.enterDates(hotelDetails.getCheckInDate(),hotelDetails.getCheckOutDate()));
     }
 
     @Test
     public void selectRoomsAndGuestsTest(){
-        SearchConfigureFlow.enterRoomsAndGuests();
+        SearchConfigureFlow.enterRoomsAndGuests(hotelDetails.getNoOfRooms(),hotelDetails.getNoOFAdults(),hotelDetails.getNoOfChildren(),hotelDetails.getChildrenAge());
     }
 
     @Test
     public void selectTravelFor(){
-        SearchConfigureFlow.enterTravelFor();
+        SearchConfigureFlow.enterTravelFor(hotelDetails.getTravellingFor());
     }
 
     @Test

@@ -72,9 +72,9 @@ public class SearchListingFlow {
 
     public static boolean selectHotel(){
 
-       String hotelName = searchListingPage.getHotelDetails();
+       Constants.hotelName = searchListingPage.getHotelDetails();
 
-       return searchListingPage.switchWindowTab(hotelName);
+       return searchListingPage.switchWindowTab(Constants.hotelName);
     }
 
 }

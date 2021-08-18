@@ -1,6 +1,11 @@
 package BO;
 
+import com.github.javafaker.Faker;
+
 public class Constants {
+
+    static Faker faker=new Faker();
+
     public static final String pageURL="https://www.makemytrip.com/";
     public static final String WORK="Work";
     public static final String LEISURE="Leisure";
@@ -18,6 +23,14 @@ public class Constants {
 
     public static String hotelName="";
     public static int totatHotelCost=0;
+    public static int totalRoomsBooked=0;
+
+
+    public static String fakeFirstName=faker.name().firstName();
+    public static String fakeLirstName=faker.name().lastName();
+    public static String fakePhn=String.valueOf(faker.number().numberBetween(60000,99999))+String.valueOf(faker.number().numberBetween(60000,99999));
+    public static String fakeEmail=faker.internet().emailAddress();
+
 
 
 }

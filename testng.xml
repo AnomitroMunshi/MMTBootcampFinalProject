@@ -30,6 +30,12 @@
                     <include name="addRoomsToCartAndVerifyTest"/>
                 </methods>
             </class>
+            <class name="Testcases.ReviewBookingTest">
+                <methods>
+                    <include name="reviewDetailsTest"/>
+                    <include name="enterguestDetailsandPay"/>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
