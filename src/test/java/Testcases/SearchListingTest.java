@@ -1,14 +1,18 @@
 package Testcases;
 
+import BO.HotelDetailsBO;
 import PageFlow.SearchListingFlow;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
 public class SearchListingTest extends BaseTest{
 
+    HotelDetailsBO searchListpageBO=hotelDetailsBO;;
+
     @Test
     public void checkSearchCriteriaTest(){
-        Assert.assertTrue(SearchListingFlow.assertSearchCriteria());
+        System.out.println(searchListpageBO);
+        Assert.assertTrue(SearchListingFlow.assertSearchCriteria(searchListpageBO));
     }
 
     @Test

@@ -1,39 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
-    <listeners>
-        <listener class-name="Listeners.CustomListener"></listener>
-    </listeners>
     <test verbose="2" preserve-order="true"
-          name="/Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject">
+          name="/Users/anomitromunshi/Documents/SeleniumBootcamp/MMTBootcampFinalProject/src/test/java/SomeTest">
         <classes>
-            <class name="Testcases.SearchHotelTest">
+            <class name="SomeTest.Test1">
                 <methods>
-                    <include name="gotoHoteltabTest"/>
-                    <include name="enterLocationTest"/>
-                    <include name="selectDates"/>
-                    <include name="selectRoomsAndGuestsTest"/>
-                    <include name="selectTravelFor"/>
-                    <include name="enterSearch"/>
+                    <include name="testt"/>
                 </methods>
             </class>
-            <class name="Testcases.SearchListingTest">
+            <class name="SomeTest.Test2">
                 <methods>
-                    <include name="checkSearchCriteriaTest"/>
-                    <include name="setAndVerifyFilterTest"/>
-                    <include name="selectHotelTest"/>
-                </methods>
-            </class>
-            <class name="Testcases.HotelDetailsTest">
-                <methods>
-                    <include name="verifyRecommendedRoomsTest"/>
-                    <include name="addRoomsToCartAndVerifyTest"/>
-                </methods>
-            </class>
-            <class name="Testcases.ReviewBookingTest">
-                <methods>
-                    <include name="reviewDetailsTest"/>
-                    <include name="enterguestDetailsandPay"/>
+                    <include name="print"/>
                 </methods>
             </class>
         </classes>

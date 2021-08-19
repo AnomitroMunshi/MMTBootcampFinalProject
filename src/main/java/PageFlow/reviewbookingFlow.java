@@ -1,6 +1,7 @@
 package PageFlow;
 
 import BO.Constants;
+import BO.HotelDetailsBO;
 import FileReader.ConfigReader;
 import Pages.Reviewpage;
 import Utils.DateFormatter;
@@ -16,7 +17,7 @@ public class reviewbookingFlow {
     static Logger logger= LogManager.getLogger(reviewbookingFlow.class);
     static Reviewpage reviewpage=new Reviewpage();
 
-    public static boolean reviewHoteldetails(){
+    public static boolean reviewHoteldetails(HotelDetailsBO guestsdetails){
 
         String hotelName=reviewpage.gethotelNameInReviewPage();
         logger.info("Hotel Name saved earlier="+Constants.hotelName);
@@ -25,14 +26,14 @@ public class reviewbookingFlow {
         String totalGuestCount=reviewpage.getguestCountInReviewPage();
         logger.info("Total guest & room count from review page="+totalGuestCount);
 
-        String totalAdultsInput=ConfigReader.getProperty("NoOfAdults");
-        String totalChildren=ConfigReader.getProperty("NoOfChildren");
+        String totalAdultsInput=guestsdetails.getNoOFAdults();
+        String totalChildren=guestsdetails.getNoOfChildren();
         String guestCountFromInput=totalAdultsInput+" Adults, "+totalChildren+" Children | "+Constants.totalRoomsBooked+" Rooms";
         logger.info("Guest & room count from input="+guestCountFromInput);
         try {
             if(hotelName.equalsIgnoreCase(Constants.hotelName)
-            && checkInDate.equalsIgnoreCase(DateFormatter.formatDateForReviewPage(ConfigReader.getProperty("CheckInDate"))) &&
-                    checkOutDate.equalsIgnoreCase(DateFormatter.formatDateForReviewPage(ConfigReader.getProperty("CheckOutDate")))
+            && checkInDate.equalsIgnoreCase(DateFormatter.formatDateForReviewPage(guestsdetails.getCheckInDate())) &&
+                    checkOutDate.equalsIgnoreCase(DateFormatter.formatDateForReviewPage(guestsdetails.getCheckOutDate()))
              && totalGuestCount.equalsIgnoreCase(guestCountFromInput)){
                 return true;
             }
@@ -43,9 +44,10 @@ public class reviewbookingFlow {
         return false;
     }
 
-    public static void inputGuestDetailsAndPay(){
-        reviewpage.enterGuestDetails();
+    public static boolean inputGuestDetailsAndPay(){
+       return reviewpage.enterGuestDetails();
     }
+
 
 
 }

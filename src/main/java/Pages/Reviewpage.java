@@ -50,7 +50,7 @@ public class Reviewpage extends BasePage{
 
     }
 
-    public void enterGuestDetails(){
+    public boolean enterGuestDetails(){
 
         doActionsMoveToElement(PHONE);
 
@@ -59,6 +59,7 @@ public class Reviewpage extends BasePage{
         fillText(PHONE,Constants.fakePhn);
         fillText(EMAIL,Constants.fakeEmail);
         doActionsMoveToElementAndClick(BOOKBTN);
+        return waitForUrlWithCustomTimeOut(Constants.CUSTOMTIMEOUT_10SEC,"/checkout");
     }
 
 }

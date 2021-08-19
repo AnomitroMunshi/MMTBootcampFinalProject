@@ -9,20 +9,19 @@ public class HotelDetailsFlow {
 
     static Logger logger= LogManager.getLogger(HotelDetailsFlow.class);
     static HotelDetails hotelDetails=new HotelDetails();
-    static String noOfadults=ConfigReader.getProperty("NoOfAdults");
-    static String noOfChildren=ConfigReader.getProperty("NoOfChildren");
 
-    public static boolean verifyRecommendedTitle(){
+
+    public static boolean verifyRecommendedTitle(String noOfadults,String noOfChildren){
         return hotelDetails.checkRecommendTitle(noOfadults,noOfChildren);
     }
 
-    public static boolean verifyTotalGuestInAllRoom(){
+    public static boolean verifyTotalGuestInAllRoom(String noOfadults,String noOfChildren){
 
         return hotelDetails.calculateTotalGuests(noOfadults,noOfChildren);
     }
 
-    public static boolean addToCartVerify(){
-        hotelDetails.addToCart();
+    public static boolean addToCartVerify(String noOfadults,String noOfChildren){
+        hotelDetails.addToCart(Integer.parseInt(noOfadults),Integer.parseInt(noOfChildren));
       return hotelDetails.verifyCart(noOfadults,noOfChildren);
     }
 }

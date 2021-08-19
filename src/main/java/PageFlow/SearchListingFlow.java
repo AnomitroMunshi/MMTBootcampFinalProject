@@ -2,6 +2,7 @@ package PageFlow;
 
 
 import BO.Constants;
+import BO.HotelDetailsBO;
 import FileReader.ConfigReader;
 import Pages.SearchListing;
 import Utils.DateFormatter;
@@ -15,7 +16,7 @@ public class SearchListingFlow {
     static SearchListing searchListingPage=new SearchListing();
 
 
-    public static boolean assertSearchCriteria(){
+    public static boolean assertSearchCriteria(HotelDetailsBO detailsBO){
 
         String LocationInput="";
         String checkInInput="";
@@ -36,17 +37,18 @@ public class SearchListingFlow {
 
         logger.info("Printing details which user gave");
         try {
-            LocationInput= ConfigReader.getProperty("Location");
-            checkInInput= DateFormatter.formatDateWithComma(ConfigReader.getProperty("CheckInDate"));
-            checkOutInput= DateFormatter.formatDateWithComma(ConfigReader.getProperty("CheckOutDate"));
-            noOfChildren=ConfigReader.getProperty("NoOfChildren");
+            LocationInput= detailsBO.getLocation();
+            logger.info("Location by user:"+ LocationInput);
+            checkInInput= DateFormatter.formatDateWithComma(detailsBO.getCheckInDate());
+            checkOutInput= DateFormatter.formatDateWithComma(detailsBO.getCheckOutDate());
+            noOfChildren=detailsBO.getNoOfChildren();
 
             if(Integer.parseInt(noOfChildren)>0){
-                totalGuests=ConfigReader.getProperty("NoOfRooms")+" Room, "+ConfigReader.getProperty("NoOfAdults")+" Adults, " +
-                        ""+ConfigReader.getProperty("NoOfChildren")+" Children";
+                totalGuests=detailsBO.getNoOfRooms()+" Room, "+detailsBO.getNoOFAdults()+" Adults, " +
+                        ""+detailsBO.getNoOfChildren()+" Children";
             }
             else {
-                totalGuests=ConfigReader.getProperty("NoOfRooms")+" Room, "+ConfigReader.getProperty("NoOfAdults")+" Adults";
+                totalGuests=detailsBO.getNoOfRooms()+" Room, "+detailsBO.getNoOFAdults()+" Adults";
             }
 
             logger.info("Location by user:"+ LocationInput);

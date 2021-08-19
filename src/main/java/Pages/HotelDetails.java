@@ -21,21 +21,26 @@ public class HotelDetails extends BasePage{
     By RECOMMENDATIONBOX=By.xpath("//section[@id='RoomType']//div[contains(@class,'comboWrap')]");
     By RECOMMENDEDROOMTITLES=By.xpath("//section[@id='RoomType']//div[contains(@class,'comboTitle')]");
     By ADDROOMBTN=By.xpath("//div[contains(@class,'multiRoomRow')][1]//a[contains(@id,'add_room')]");
+
     By SELECTGUESTBOX=By.xpath("//div[contains(@class,'multiRoomRow')][1]//input[contains(@class,'ddHeaderTitle')]");
     By GUESTLISTDROPDOWN=By.xpath("//ul[@class='ddList']/li");
-    By REVEIWBTN=By.xpath("//a[text()='Review Details']");
+
     By NOGUESTBOX=By.xpath("//div[@class='ddPosition']//p");
     By EACHROOMPRICE=By.xpath("//div[contains(@class,'selectedRoomRow')]/div/p[1]");
     By TOTALPRICEINCART=By.xpath("//span[contains(@id,'cart_total')]");
     By TOTALGUESTSINCART=By.xpath("//span[contains(@id,'cart_total')]/preceding-sibling::span");
 
+    By GUESTINEACHROOMINCART=By.xpath("//div[contains(@class,'selectedRoomRow')]/p[2]");
+
+    By REVEIWBTN=By.xpath("//a[text()='Review Details']");
+    By SELECTEDROOM=By.xpath("//div[contains(@class,'selectedRoom')]//span");
 
 
     //Dynamic xpath
     String SPECIFICRECOMMENDBOX="//section[@id='RoomType']/div/div[%replacable%]";
-    String GUESTCOUNTINRECOMMBOX="//section[@id='RoomType']//div[contains(@class,'roomRow')][%replacable%]//p[text()='Adults']";
+    String GUESTCOUNTINRECOMMBOX="(//section[@id='RoomType']//div[contains(@class,'comboWrap')])[%replacable%]//p[text()='Adults']";
     String GUESTLISTDROPDOWNEACH="//ul[@class='ddList']/li[%replacable%]";
-
+    String SELECTEDROOMCLOSE="(//div[contains(@class,'selectedRoom')]//span)[%replacable%]";
     //page functions
 
     public boolean checkRecommendTitle(String adultsCount,String childernCount){
@@ -105,7 +110,7 @@ public class HotelDetails extends BasePage{
         return totalMap;
     }
 
-
+    /*Converts Adult and children count to Map*/
     private Map<String,Integer> addTotalAdultsChildren(String countAdultCildren){ //2 Adults + 1 Child
         Map<String,Integer> adultchildrenMap=new HashMap<>();
         int[] ageArray = new int[2];
@@ -132,8 +137,8 @@ public class HotelDetails extends BasePage{
         return adultchildrenMap;
     }
 
-
-    public void addToCart(){
+    /*Add to cart*/
+    public void addToCart(int adultcount, int childCount){
         doActionsMoveToElement(ADDROOMBTN);
         try {
             click(SELECTGUESTBOX);
@@ -145,7 +150,20 @@ public class HotelDetails extends BasePage{
                 try {
                     click(DynamicXpath.get(GUESTLISTDROPDOWNEACH, String.valueOf(i + 1)));
                     click(ADDROOMBTN);
-                    click(SELECTGUESTBOX);
+                    if(verifyGUESTCOUNT(adultcount,childCount)==-1){
+                        if(getElement(SELECTGUESTBOX).isDisplayed()){
+                            click(SELECTGUESTBOX);
+                        }else {
+                            getText(NOGUESTBOX);
+                            click(ADDROOMBTN);
+                        }
+                    }
+                    if(verifyGUESTCOUNT(adultcount,childCount)==0)
+                        break;
+                    if(verifyGUESTCOUNT(adultcount,childCount)==1){
+                        List<WebElement> selectedRooms=getElements(SELECTEDROOM);
+                        click(DynamicXpath.get(SELECTEDROOMCLOSE,String.valueOf(selectedRooms.size())));
+                    }
                 }catch (Exception e){
                     System.out.println("stale exception");
                     click(SELECTGUESTBOX);
@@ -153,10 +171,7 @@ public class HotelDetails extends BasePage{
             }
             click(SELECTGUESTBOX);
         }catch (TimeoutException tex){
-            //when only one option is present
             logger.info("No Guest Dropdown present.");
-            getText(NOGUESTBOX);
-            click(ADDROOMBTN);
             /*code , when total guest number is not staisfied.*/
 
         }catch (Exception e){
@@ -166,6 +181,7 @@ public class HotelDetails extends BasePage{
         doActionsMoveToElement(REVEIWBTN);
     }
 
+    /*Verifying the total price and final guets count*/
     public boolean verifyCart(String noOfAdults,String noOfChildren){
         List<WebElement> totalPriceList=getElements(EACHROOMPRICE);
         System.out.println("Total no.of room with price="+totalPriceList.size());
@@ -197,5 +213,31 @@ public class HotelDetails extends BasePage{
 
     }
 
+    /*Method to verify guest count in cart is equal to input guest count*/
+    private int verifyGUESTCOUNT(int adultCount,int childCount){
+        Map<String,Integer> totalGUESTMAP=new HashMap<>();
+        List<WebElement> gcount=getElements(GUESTINEACHROOMINCART);
+        for(WebElement e:gcount){
+            Map<String,Integer> guestMap = addTotalAdultsChildren(e.getText());
+            System.out.println(guestMap);
+            for(Map.Entry<String,Integer> mentry:guestMap.entrySet()){
+                if(totalGUESTMAP.containsKey(mentry.getKey())){
+                    totalGUESTMAP.put(mentry.getKey(),totalGUESTMAP.get(mentry.getKey())+mentry.getValue());
+                }
+                else
+                    totalGUESTMAP.put(mentry.getKey(),mentry.getValue());
+            }
+        }
+        System.out.println("Total Map="+totalGUESTMAP);
 
+
+        if (totalGUESTMAP.get("Adults")==adultCount && totalGUESTMAP.get("Children")==childCount)
+            return 0;
+        if(totalGUESTMAP.get("Adults")>adultCount || totalGUESTMAP.get("Children")>childCount)
+            return 1;
+        if(totalGUESTMAP.get("Adults")<adultCount || totalGUESTMAP.get("Children")<childCount)
+            return -1;
+
+        return 0;
+    }
 }

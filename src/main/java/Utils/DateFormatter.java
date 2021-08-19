@@ -45,9 +45,23 @@ public class DateFormatter {
     }
 
 
+    public static String formatDateForCheckOutPage(String dateString) throws ParseException {
+        String formattedDate;
+        Format formatter;
+
+        Date newdate=new SimpleDateFormat("dd/MM/yyyy").parse(dateString);
+        formatter = new SimpleDateFormat("E, dd MMM yy");
+        formattedDate = formatter.format(newdate);
+
+        String[] dateFormat=formattedDate.split(" ");
+        String newDate=dateFormat[0]+" "+dateFormat[1]+" "+dateFormat[2]+"'"+dateFormat[3];
+        System.out.println(newDate);
+        return newDate;
+    }
+
+
     /*public static void main(String[] args) throws ParseException {
-        formatDateForReviewPage("23/09/2021");
-
-
+        formatDateForCheckOutPage("25/09/2021");
+        //Sat, 25 Sep'21
     }*/
 }

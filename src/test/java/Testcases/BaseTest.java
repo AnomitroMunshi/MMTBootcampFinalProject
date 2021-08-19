@@ -24,15 +24,12 @@ public class BaseTest {
 		new ConfigReader();
 		logger.info("Config file read & loaded");
 
-		logger.info("Mapping datas from properties to BO class");
-		DataReader.getValuesFromFile(hotelDetailsBO);
-
-
 		// initialize log properties
 		logger.info("Initializing log properties");
 		PropertyConfigurator.configure("src/main/resources/Properties/log4j.properties");
 		logger.info("Log properties initialized");
 	}
+
 
 	@BeforeTest
 	public void browserOpen() {
@@ -41,6 +38,12 @@ public class BaseTest {
 		System.out.println("Driver opened on Thread ID::" + Thread.currentThread().getId());
 		GoToLandingPage.go();
 
+	}
+
+	@BeforeClass
+	public void getDatas(){
+		logger.info("Mapping datas from properties to BO class");
+		DataReader.getValuesFromFile(hotelDetailsBO);
 	}
 
 	@AfterTest
