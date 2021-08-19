@@ -5,19 +5,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de653eb9-9fb2-4499-9139-8d603a77824a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_qameta_allure_allure_java_commons_2_13_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_qameta_allure_allure_model_2_13_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_qameta_allure_allure_test_filter_2_13_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_qameta_allure_allure_testng_2_13_10.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tika_tika_core_1_26.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jooq_joor_java_8_0_9_14.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MMTBootcampFinalProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MMTBootcampFinalProject.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/HotelDetailsFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/HotelDetailsFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/SearchListingFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/SearchListingFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/reviewbookingFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/reviewbookingFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HotelDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HotelDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Reviewpage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Reviewpage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/DateFormatter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/DateFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SomeTest/Base.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SomeTest/Base.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MMTtestng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MMTtestng.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/HotelDetailsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/HotelDetailsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/ReviewBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/ReviewBookingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/SearchHotelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/SearchHotelTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/SearchListingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/SearchListingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/MMTtestng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
