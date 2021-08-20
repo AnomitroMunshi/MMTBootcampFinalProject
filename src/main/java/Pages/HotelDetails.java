@@ -41,8 +41,10 @@ public class HotelDetails extends BasePage{
     String GUESTCOUNTINRECOMMBOX="(//section[@id='RoomType']//div[contains(@class,'comboWrap')])[%replacable%]//p[text()='Adults']";
     String GUESTLISTDROPDOWNEACH="//ul[@class='ddList']/li[%replacable%]";
     String SELECTEDROOMCLOSE="(//div[contains(@class,'selectedRoom')]//span)[%replacable%]";
+
     //page functions
 
+    /*Check recommendationBoxTitle*/
     public boolean checkRecommendTitle(String adultsCount,String childernCount){
         String title="";
         int flag=0;
@@ -66,6 +68,7 @@ public class HotelDetails extends BasePage{
         return (flag==recommendTitleList.size());
     }
 
+    /*Check recommendationBox guestCount*/
     public boolean calculateTotalGuests(String adultsCount,String childernCount){
         int totalAdult=0;
         int totalChildren=0;
@@ -86,6 +89,7 @@ public class HotelDetails extends BasePage{
         return (flag==recommendationBoxList.size());
     }
 
+    /*calculating guest count in each recommendationBox*/
     private Map<String,Integer> findTotalCountOfRecommnedBox(int recommendBoxIndex){
 
         Map<String,Integer> totalMap=new HashMap<>();

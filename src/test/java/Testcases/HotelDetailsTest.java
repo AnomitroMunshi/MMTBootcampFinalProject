@@ -1,6 +1,6 @@
 package Testcases;
 
-import BO.HotelDetailsBO;
+import BO.TestDatasBO;
 import PageFlow.HotelDetailsFlow;
 import io.qameta.allure.Epic;
 import io.qameta.allure.Story;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class HotelDetailsTest extends BaseTest{
 
-    HotelDetailsBO guestDetails=hotelDetailsBO;
+    TestDatasBO guestDetails= testDatasBO;
 
     @Test
     @Epic("Hotel Details Component")

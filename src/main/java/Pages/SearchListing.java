@@ -68,6 +68,7 @@ public class SearchListing extends BasePage{
         return getElement(XPATH).getAttribute("value");
     }
 
+    /*Selecting price range*/
     public void selectPriceRange(){
 
         doActionsMoveToElement(MAXVALUE);
@@ -87,6 +88,7 @@ public class SearchListing extends BasePage{
 
     }
 
+    /*Selecting user rating*/
     public void selectUserRating(){
         doActionsMoveToElement(USERRATINGS);
         List<WebElement> userRatings=  getElements(USERRATINGLIST);
@@ -109,6 +111,7 @@ public class SearchListing extends BasePage{
 
     }
 
+    /*Verifying filters*/
     public boolean verifyFilters(){
         List<WebElement> appliedFiltersList=getElements(APPLIEDFILTERS);
         logger.info(appliedFiltersList);
@@ -127,6 +130,7 @@ public class SearchListing extends BasePage{
             return false;
     }
 
+    /*get hotel details*/
     public String getHotelDetails(){
 
         waitForElementVisibleWithCustomTimeOut(HOTELLIST,Constants.CUSTOMTIMEOUT_10SEC);
@@ -155,6 +159,7 @@ public class SearchListing extends BasePage{
         return hotelName;
     }
 
+    /*Switching window*/
     public boolean switchWindowTab(String hotelName){
 
         String currentWindowID=getCurrentWindow();

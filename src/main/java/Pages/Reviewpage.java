@@ -22,11 +22,12 @@ public class Reviewpage extends BasePage{
 
 
 
+    /*Getting HotelName in review page */
     public String gethotelNameInReviewPage(){
         return getText(HOTELNAME);
     }
 
-
+    /*Getting fate in review page */
     public String getDateInReviewpage(String dateType){
         String dates="";
         switch (dateType){
@@ -43,13 +44,14 @@ public class Reviewpage extends BasePage{
         return dates;
     }
 
-
+    /*Getting guestCount in review page */
     public String getguestCountInReviewPage(){
 
         return getText(GUESTDETAILS);
 
     }
 
+    /*Entering guest details in review page */
     public boolean enterGuestDetails(){
 
         doActionsMoveToElement(PHONE);

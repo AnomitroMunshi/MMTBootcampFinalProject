@@ -61,6 +61,7 @@ public class LandingPage extends BasePage{
         return currentURL.equals(url);
     }
 
+    /*Function to click on HOTEL TAB*/
     public boolean goToPagetab(String pageTab){
         logger.info("Clicking on menu: "+pageTab);
         try{
@@ -75,6 +76,7 @@ public class LandingPage extends BasePage{
         return getCurrentUrl().contains("/hotels");
     }
 
+    /*Function to input Hotel/travel Location*/
     public String goToLocation(String city){
 
         try{
@@ -88,6 +90,7 @@ public class LandingPage extends BasePage{
         return getElement(LOCATIONAME).getAttribute("value");
     }
 
+    /*Function to input Checkin & CheckOut Date*/
     public boolean selectDate(String chckInDate,String chckOutDate){
         while (getElement(NEXTDATES).isDisplayed()){
             logger.info("next date arrow displayed!");
@@ -114,6 +117,7 @@ public class LandingPage extends BasePage{
     return getElement(ROOMGUESTCOUNT).isDisplayed();
     }
 
+    /*Function to input No.of Guests and No.of Rooms*/
     public void inputRoomsAndGuest(String noOfRooms, String noOfAdults, String noOfChildren, List<String> childrenages){
         if(Integer.parseInt(noOfRooms)<1)
             throw  new IllegalStateException("No.of rooms cannot be less than 1");
@@ -127,6 +131,7 @@ public class LandingPage extends BasePage{
         click(SUBMITROOMGUEST);
     }
 
+    /*Function to input adult adn children*/
     private void inputAdultAndChildren(String noOfAdults,String noOfChildren,List<String> childrenages){
         System.out.println("no.of adults="+noOfAdults);
         click(DynamicXpath.get(ADULTCOUNT,noOfAdults));
@@ -139,6 +144,7 @@ public class LandingPage extends BasePage{
         }
     }
 
+    /*Function to input children age*/
     private void inputChildrenAge(List<String> childrenages){
         List<WebElement> childAgeDropdown=getElements(CHILDAGELIST);
         for(int i=0;i<childAgeDropdown.size();i++){
@@ -148,11 +154,13 @@ public class LandingPage extends BasePage{
         }
     }
 
+    /*Function to input Travel For */
     public void inputTravelFor(String travelFor){
         click(TRAVELFOR);
         click(DynamicXpath.get(travelForOpt,travelFor));
     }
 
+    /*Function to search hotels*/
     public boolean submitSearch(){
         click(SEARCHBTN);
         waitForPageLoad();

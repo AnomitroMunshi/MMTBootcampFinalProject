@@ -1,19 +1,19 @@
 package FileReader;
 
-import BO.HotelDetailsBO;
+import BO.TestDatasBO;
 
 public class DataReader {
 
-    public static void getValuesFromFile(HotelDetailsBO hotelDetailsBO){
+    public static void getValuesFromFile(TestDatasBO testDatasBO){
 
-        hotelDetailsBO.setLocation(ConfigReader.getProperty("Location"));
-        hotelDetailsBO.setNoOFAdults(ConfigReader.getProperty("NoOfAdults"));
-        hotelDetailsBO.setNoOfChildren(ConfigReader.getProperty("NoOfChildren"));
-        hotelDetailsBO.setChildrenAge(ConfigReader.getProperty("ChildrenAge"));
-        hotelDetailsBO.setCheckInDate(ConfigReader.getProperty("CheckInDate"));
-        hotelDetailsBO.setCheckOutDate(ConfigReader.getProperty("CheckOutDate"));
-        hotelDetailsBO.setNoOfRooms(ConfigReader.getProperty("NoOfRooms"));
-        hotelDetailsBO.setTravellingFor(ConfigReader.getProperty("TravellingFor"));
+        testDatasBO.setLocation(ConfigReader.getProperty("Location"));
+        testDatasBO.setNoOFAdults(ConfigReader.getProperty("NoOfAdults"));
+        testDatasBO.setNoOfChildren(ConfigReader.getProperty("NoOfChildren"));
+        testDatasBO.setChildrenAge(ConfigReader.getProperty("ChildrenAge"));
+        testDatasBO.setCheckInDate(ConfigReader.getProperty("CheckInDate"));
+        testDatasBO.setCheckOutDate(ConfigReader.getProperty("CheckOutDate"));
+        testDatasBO.setNoOfRooms(ConfigReader.getProperty("NoOfRooms"));
+        testDatasBO.setTravellingFor(ConfigReader.getProperty("TravellingFor"));
 
     }
 }

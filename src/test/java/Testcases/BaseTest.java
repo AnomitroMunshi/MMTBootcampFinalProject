@@ -1,10 +1,9 @@
 package Testcases;
 
-import BO.HotelDetailsBO;
+import BO.TestDatasBO;
 import DriverManager.DriverFactory;
 import FileReader.ConfigReader;
 import FileReader.DataReader;
-import FileReader.JSONReader;
 import PageFlow.GoToLandingPage;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
@@ -15,7 +14,7 @@ import org.testng.annotations.*;
 public class BaseTest {
 
 	Logger logger= LogManager.getLogger(BaseTest.class);
-	HotelDetailsBO hotelDetailsBO=new HotelDetailsBO();
+	TestDatasBO testDatasBO =new TestDatasBO();
 
 	@BeforeSuite
 	public void setPrerequisites() {
@@ -33,21 +32,26 @@ public class BaseTest {
 
 	@BeforeTest
 	public void browserOpen() {
+
+		//initialzing Driver
 		DriverFactory.initDriver();
 		logger.info("Browser opened");
 		System.out.println("Driver opened on Thread ID::" + Thread.currentThread().getId());
+		logger.info("Traversing to landing page");
 		GoToLandingPage.go();
 
 	}
 
 	@BeforeClass
 	public void getDatas(){
+		//Mapping testdatas to BO class
 		logger.info("Mapping datas from properties to BO class");
-		DataReader.getValuesFromFile(hotelDetailsBO);
+		DataReader.getValuesFromFile(testDatasBO);
 	}
 
 	@AfterTest
 	public void closeBrowser() {
+		//quitting the current Driver
 		DriverFactory.getCurrentDriver().quit();
 	}
 }

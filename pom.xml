@@ -91,9 +91,9 @@
 
     </dependencies>
 
-    <build>
+    <!--<build>
         <plugins>
-            <!-- to run a java class with main method -->
+            &lt;!&ndash; to run a java class with main method &ndash;&gt;
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>exec-maven-plugin</artifactId>
@@ -113,7 +113,7 @@
                 </configuration>
             </plugin>
 
-            <!-- to avoid running tests from test/java package -->
+            &lt;!&ndash; to avoid running tests from test/java package &ndash;&gt;
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -124,6 +124,6 @@
             </plugin>
 
         </plugins>
-    </build>
+    </build>-->
 
 </project>

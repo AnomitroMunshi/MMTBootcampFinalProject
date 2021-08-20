@@ -2,8 +2,7 @@ package PageFlow;
 
 
 import BO.Constants;
-import BO.HotelDetailsBO;
-import FileReader.ConfigReader;
+import BO.TestDatasBO;
 import Pages.SearchListing;
 import Utils.DateFormatter;
 import org.apache.log4j.LogManager;
@@ -16,7 +15,8 @@ public class SearchListingFlow {
     static SearchListing searchListingPage=new SearchListing();
 
 
-    public static boolean assertSearchCriteria(HotelDetailsBO detailsBO){
+    /*Verifying search criteria*/
+    public static boolean assertSearchCriteria(TestDatasBO detailsBO){
 
         String LocationInput="";
         String checkInInput="";
@@ -40,7 +40,9 @@ public class SearchListingFlow {
             LocationInput= detailsBO.getLocation();
             logger.info("Location by user:"+ LocationInput);
             checkInInput= DateFormatter.formatDateWithComma(detailsBO.getCheckInDate());
+            logger.info("Checkin date by user:"+ checkInInput);
             checkOutInput= DateFormatter.formatDateWithComma(detailsBO.getCheckOutDate());
+            logger.info("Checkout date by user:"+ checkOutInput);
             noOfChildren=detailsBO.getNoOfChildren();
 
             if(Integer.parseInt(noOfChildren)>0){
@@ -65,6 +67,7 @@ public class SearchListingFlow {
         && checkOutDateInApp.equalsIgnoreCase(checkOutInput) && guestCountInApp.equalsIgnoreCase(totalGuests));
     }
 
+    /*Applying search filters*/
     public static boolean applySearchFilter(){
 
         searchListingPage.selectPriceRange();
@@ -72,6 +75,7 @@ public class SearchListingFlow {
         return searchListingPage.verifyFilters();
     }
 
+    /*Selecting 5th Hotel or last hotel according to availability*/
     public static boolean selectHotel(){
 
        Constants.hotelName = searchListingPage.getHotelDetails();

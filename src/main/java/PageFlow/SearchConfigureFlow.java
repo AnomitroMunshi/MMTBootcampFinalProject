@@ -2,9 +2,7 @@ package PageFlow;
 
 import BO.Constants;
 
-import BO.HotelDetailsBO;
 import FileReader.ConfigReader;
-import FileReader.JSONReader;
 import Pages.LandingPage;
 import io.qameta.allure.Step;
 import org.apache.log4j.LogManager;
@@ -23,7 +21,7 @@ public class SearchConfigureFlow {
 
     @Step("Clicking on Hotel Menu Tab")
     public static boolean clickMenuTab() {
-        System.out.println(ConfigReader.getProperty("PageMenu"));
+        logger.info(ConfigReader.getProperty("PageMenu"));
         return landingPage.goToPagetab(ConfigReader.getProperty("PageMenu"));
 
     }

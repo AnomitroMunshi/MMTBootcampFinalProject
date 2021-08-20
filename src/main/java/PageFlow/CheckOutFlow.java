@@ -1,7 +1,7 @@
 package PageFlow;
 
 import BO.Constants;
-import BO.HotelDetailsBO;
+import BO.TestDatasBO;
 import Pages.CheckOut;
 import Utils.DateFormatter;
 import org.apache.log4j.LogManager;
@@ -14,7 +14,7 @@ public class CheckOutFlow {
     static Logger logger= LogManager.getLogger(CheckOutFlow.class);
     static CheckOut checkOut=new CheckOut();
 
-    public static boolean verifyCheckOut(HotelDetailsBO detailsBO){
+    public static boolean verifyCheckOut(TestDatasBO detailsBO){
 
         String checkInDate=checkOut.getDateFromCheckOutPage(Constants.CHECKINDATE);
         String checkOutDate=checkOut.getDateFromCheckOutPage(Constants.CHECKOUTDATE);

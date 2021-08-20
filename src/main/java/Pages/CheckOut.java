@@ -18,6 +18,7 @@ public class CheckOut extends BasePage{
 
     //page functions
 
+    /*Getting date in checkout page */
     public String getDateFromCheckOutPage(String dateType){
         String dates="";
         switch (dateType){
@@ -35,17 +36,21 @@ public class CheckOut extends BasePage{
 
     }
 
+    /*Getting hotelName in checkout page */
     public String getHotelNameFromCheckOutPage(){
+        logger.info(getText(HOTELNAME));
         return getText(HOTELNAME);
     }
 
+    /*Getting traveller in checkout page */
     public String getTravellerNameFromCheckoutPage(){
-        System.out.println(getText(TRAVELLERNAME));
+        logger.info(getText(TRAVELLERNAME));
         return getText(TRAVELLERNAME);
     }
 
+    /*Getting traveller contact info in checkout page */
     public String getTravellerContactInfoFromCheckOutPage(){
-        System.out.println(getText(TRAVELLERDETAILS));
+        logger.info(getText(TRAVELLERDETAILS));
         return getText(TRAVELLERDETAILS);
     }
 

@@ -11,6 +11,7 @@ public class HotelDetailsFlow {
     static HotelDetails hotelDetails=new HotelDetails();
 
 
+    /*Verifying recommendationBoxTitle*/
     public static boolean verifyRecommendedTitle(String noOfadults,String noOfChildren){
         return hotelDetails.checkRecommendTitle(noOfadults,noOfChildren);
     }

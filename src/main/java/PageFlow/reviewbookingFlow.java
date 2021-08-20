@@ -1,12 +1,9 @@
 package PageFlow;
 
 import BO.Constants;
-import BO.HotelDetailsBO;
-import FileReader.ConfigReader;
+import BO.TestDatasBO;
 import Pages.Reviewpage;
 import Utils.DateFormatter;
-import com.github.javafaker.Faker;
-import org.apache.commons.io.output.ClosedOutputStream;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
@@ -17,7 +14,7 @@ public class reviewbookingFlow {
     static Logger logger= LogManager.getLogger(reviewbookingFlow.class);
     static Reviewpage reviewpage=new Reviewpage();
 
-    public static boolean reviewHoteldetails(HotelDetailsBO guestsdetails){
+    public static boolean reviewHoteldetails(TestDatasBO guestsdetails){
 
         String hotelName=reviewpage.gethotelNameInReviewPage();
         logger.info("Hotel Name saved earlier="+Constants.hotelName);

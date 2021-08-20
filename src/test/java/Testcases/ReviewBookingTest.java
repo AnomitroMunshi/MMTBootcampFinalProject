@@ -1,6 +1,6 @@
 package Testcases;
 
-import BO.HotelDetailsBO;
+import BO.TestDatasBO;
 import PageFlow.CheckOutFlow;
 import PageFlow.reviewbookingFlow;
 import io.qameta.allure.Epic;
@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class ReviewBookingTest extends BaseTest{
 
-    HotelDetailsBO guestsDetailsBO=hotelDetailsBO;
+    TestDatasBO guestsDetailsBO= testDatasBO;
 
     @Test
     @Epic("ReviewBooking Page Component")
