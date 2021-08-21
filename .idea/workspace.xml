@@ -6,33 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="de653eb9-9fb2-4499-9139-8d603a77824a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MMTtestng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestNG/MMTtestng.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BO/HotelDetailsBO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/BO/TestDatasBO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BO/TestDatasBO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileReader/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FileReader/DataReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/FileReader/JSONReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/CheckOutFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/CheckOutFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/HotelDetailsFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/HotelDetailsFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/SearchConfigureFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/SearchListingFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/SearchListingFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/reviewbookingFlow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PageFlow/reviewbookingFlow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/PageFlow/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/CheckOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/CheckOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/HotelDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/HotelDetails.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/LandingPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/LandingPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/Reviewpage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/Reviewpage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Pages/SearchListing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Pages/SearchListing.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SomeTest/Base.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SomeTest/Test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SomeTest/Test2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/SomeTest/insert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/HotelDetailsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/HotelDetailsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/ReviewBookingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/ReviewBookingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/SearchHotelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/SearchHotelTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Testcases/SearchListingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Testcases/SearchListingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNG/MMTtestng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/TestNGXML/MMTtestng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +60,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/Properties" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources/TestNGXML" />
       <recent name="$PROJECT_DIR$/src/test/java/TestNG" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
