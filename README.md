@@ -53,4 +53,5 @@ This project can be triggered in two ways
 _PreRequisite_ : Allure must be installed
 
 To see report run `allure serve allure-results`
+
 Logs and failed test screenshot of the run can be found in `/output`
