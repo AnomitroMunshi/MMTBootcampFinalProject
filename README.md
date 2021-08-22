@@ -46,12 +46,11 @@ This project can be triggered in two ways
 - Selection of CheckIn and CheckOut dates was bit tricky, came up with **DYNAMIC XPATH** creation logic to work with any dates.
 - Applying range filer took me some time to automate properly as **STALE EXCEPTION** was happening.
 - Counting travellers count in each Recommendation Box was bit challenging , but again **DYANMIC XPATH** helped a lot
-- Adding travellers to cart is the most challenging moment, coudn't finish it properly ..will work on it and update in coming days.
+- Adding travellers to cart is the most challenging moment, coudn't finish it properly , will work on it and update in coming days.
 
 **TO CHECK ALLURE REPORT**
 
 _PreRequisite_ : Allure must be installed
 
 To see report run `allure serve allure-results`
-
 Logs and failed test screenshot of the run can be found in `/output`
